@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Registro</title>
+  
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Los iconos tipo Solid de Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Nuestro css-->
+  <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="estilos.css" th:href="@{/css/index.css}">
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+      <b class="navbar-brand">
+          <a>Grupo Cero</a>
+      </b>
+    <a class="navbar-brand">
+      <img class="logo-empresa img-fluid" src="img/logo.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"> Inicio</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Artes/Galeria
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="pinturas.html">Pintura</a>
+            <a class="dropdown-item" href="esculturas.html">Escultura</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="tejidos.html">Tejidos</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="artistas.html">Artistas</a>
+        </li>
+
+          <li>
+            <img class="iconos-redes-header" src="img/facebook-logo-button.svg" alt="Facebook">
+            <img class="iconos-redes-header" src="img/instagram-logo.svg" alt="Instagram">
+            <img class="iconos-redes-header" src="img/twitter-logo-button.svg" alt="Twitter">
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<body>
+  
+  <div class="modal-dialog text-center">
+    <div class="col-sm-8 main-section">
+      <div class="modal-content">
+        <div class="col-12 user-img">
+          <img class="img-fluid"  src="img/avatar.png">
+        </div>
+        <form class="col-12 ">
+          <div class="form-group" id="user-group">
+            <input type="text" class="form-control" placeholder="Nombre">
+          </div>
+          <div class="form-group" id="correo-group">
+            <input type="email" class="form-control" placeholder="Correo">
+          </div>
+          <div class="form-group" id="contraseña-group">
+            <input type="password" class="form-control" placeholder="Contraseña">
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
+
+        </form>
+        <div class="col-12 forgot">
+          <a href="#">Recordar Contraseña</a>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+
+
+</body>
+
+</html>

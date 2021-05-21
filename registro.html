@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
-  <title>Registro</title>
+  <title>Registrarse</title>
   
-
   <!--JQUERY-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -19,8 +18,11 @@
   <!-- Nuestro css-->
   <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="estilos.css" th:href="@{/css/index.css}">
-
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
 </head>
+
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
       <b class="navbar-brand">
@@ -67,46 +69,95 @@
   </div>
 </nav>
 
-
-
-
-
-
 <body>
-  
-  <div class="modal-dialog text-center">
-    <div class="col-sm-8 main-section">
-      <div class="modal-content">
-        <div class="col-12 user-img">
-          <img class="img-fluid"  src="img/avatar.png">
+	<main>
+		<form action="" class="formulario" id="formulario">
+		
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password" placeholder="Contraseña">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+			</div>
+
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Repetir Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2" placeholder="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="@">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div> 
+
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
+
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+  <footer>
+    <div class="contenedor-footer">
+        <div class="content-foo">
+            <h4>Telefono</h4>
+            <p>+56963124781</p>
         </div>
-        <form class="col-12 ">
-          <div class="form-group" id="user-group">
-            <input type="text" class="form-control" placeholder="Nombre">
-          </div>
-          <div class="form-group" id="correo-group">
-            <input type="email" class="form-control" placeholder="Correo">
-          </div>
-          <div class="form-group" id="contraseña-group">
-            <input type="password" class="form-control" placeholder="Contraseña">
-          </div>
-          <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
-
-        </form>
-        <div class="col-12 forgot">
-          <a href="#">Recordar Contraseña</a>
+        <div class="content-foo">
+            <h4>E-mail</h4>
+            <p>grupo_0@gmail.com</p>
         </div>
-
-
-      </div>
+        <div class="content-foo">
+            <h4>Ubicación</h4>
+            <p>Balmaceda 511, Viña del Mar, Valparaíso</p>
+        </div>
     </div>
-  </div>
+    <h2 class="titulo-final"> Cooperativa | Grupo Cero®</h2>
+</footer>
 
 
 </body>
 
 </html>
-
 
 </body>
 
